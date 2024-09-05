@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}Decode Result{% endblock %}
+
+{% block content %}
+<h1>Decoded Message</h1>
+<p>{{ decoded_message }}</p>
+<a href="{{ url_for('steganography') }}">Back to Steganography</a>
+{% endblock %}

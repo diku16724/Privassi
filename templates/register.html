@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Register</h1>
+<form action="{{ url_for('register_user') }}" method="POST">
+    <label for="name">Name:</label><br>
+    <input type="text" id="register--name" name="register--name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="register--email" name="register--email" required><br><br>
+
+    <label for="username">Username:</label><br>
+    <input type="text" id="register--username" name="register--username" required><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="register--password" name="register--password" required><br><br>
+
+    <label for="confirm-password">Confirm Password:</label><br>
+    <input type="password" id="register--confirm-password" name="register--confirm-password" required><br><br>
+
+    {% if error_message %}
+    <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+
+    <input type="submit" value="Register">
+</form>
+<p>Already have an account? <a href="{{ url_for('login') }}">Login here</a>.</p>
+{% endblock %}

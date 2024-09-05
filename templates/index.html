@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section>
+    <h1>Welcome to the Privassi</h1>
+    <p>This application provides various cryptographic tools for your needs.</p>
+</section>
+<section>
+
+    <a href="{{ url_for('symmetric') }}" class="btn">Symmetric Encryption</a>
+
+
+    <a href="{{ url_for('asymmetric') }}" class="btn">Asymmetric Encryption</a>
+
+    <a href="{{ url_for('steganography') }}" class="btn">Steganography</a>
+
+    <a href="{{ url_for('view_passwords') }}" class="btn">Password Manager</a>
+</section>
+
+<footer>
+
+</footer>
+{% endblock %}
